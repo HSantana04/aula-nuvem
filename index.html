@@ -1,11 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextWave</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial;
+}
+
+body{
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+background:linear-gradient(135deg,#020617,#0f172a);
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+opacity:0.8;
+}
+
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:12px 30px;
+border-radius:30px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-size:36px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+height:200px;
+border-radius:10px;
+overflow:hidden;
+position:relative;
+}
+
+.project img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s;
+}
+
+.project:hover img{
+transform:scale(1.1);
+}
+
+.project span{
+position:absolute;
+bottom:10px;
+left:10px;
+background:rgba(0,0,0,0.6);
+padding:5px 10px;
+border-radius:5px;
+}
+
+.contact{
+text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:20px;
+background:#38bdf8;
+cursor:pointer;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:50px;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:40px;
+}
+
+header{
+padding:15px 5%;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-    Hello World
+
+<header>
+
+<div class="logo">NextWave</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Serviços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#contact">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Construa o Futuro</h1>
+
+<p>
+Crie produtos digitais modernos com design elegante, performance alta
+e tecnologia de ponta.
+</p>
+
+<a class="btn" href="#services">Começar</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Serviços</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Desenvolvimento Web</h3>
+<p>
+Sites modernos, rápidos e responsivos utilizando as melhores tecnologias.
+</p>
+</div>
+
+<div class="card">
+<h3>Cloud Architecture</h3>
+<p>
+Infraestrutura escalável em nuvem com alta disponibilidade e segurança.
+</p>
+</div>
+
+<div class="card">
+<h3>Machine Learning</h3>
+<p>
+Soluções inteligentes com IA para automatizar processos e gerar valor.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="section-title">Projetos</h2>
+
+<div class="portfolio">
+
+<div class="project">
+<img src="https://picsum.photos/500/300?1">
+<span>Projeto 1</span>
+</div>
+
+<div class="project">
+<img src="https://picsum.photos/500/300?2">
+<span>Projeto 2</span>
+</div>
+
+<div class="project">
+<img src="https://picsum.photos/500/300?3">
+<span>Projeto 3</span>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contato</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Seu nome">
+
+<input type="email" placeholder="Seu email">
+
+<textarea rows="5" placeholder="Mensagem"></textarea>
+
+<button onclick="send()">Enviar</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 NextWave - Todos os direitos reservados</p>
+
+</footer>
+
+<script>
+
+function send(){
+alert("Mensagem enviada!");
+}
+
+window.addEventListener("scroll",()=>{
+const header=document.querySelector("header")
+if(window.scrollY>50){
+header.style.background="rgba(0,0,0,0.8)"
+}else{
+header.style.background="rgba(0,0,0,0.4)"
+}
+})
+
+</script>
+
 </body>
 </html>
